@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdullah Rehmat</title>
+
+    <!-- Internal Dependencies -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{url_for('static', filename='images/favicon.ico')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/main.css')}}"
+    />
+    <script type=text/javascript src="{{
+        url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- External Dependencies -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"> 
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.1/css/line.css"
+    />
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+
+    <footer>
+        <div id="footer-flex">
+            <div class="footer-item">&copy; Abdullah Rehmat 2021</div>
+        </div>
+    </footer>
+  </body>
+</html>

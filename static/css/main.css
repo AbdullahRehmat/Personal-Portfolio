@@ -1,0 +1,382 @@
+/* GENERAL CSS STYLES */
+html {
+  margin: 0;
+  padding: 0;
+  min-width: 350px;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--background-color);
+  scrollbar-width: auto;
+  scrollbar-gutter: stable;
+}
+
+:root {
+  --pastel-red: #ff5147;
+  --pastel-green: #77dd77;
+}
+
+.theme-light {
+  --general-color: #161618;
+  --background-color: #ffffff;
+  --item-background: #ffffff;
+  --item-hover: #efefef;
+  --item-outline: #efefef;
+}
+
+.theme-dark {
+  --general-color: #ffffff;
+  --background-color: #121212;
+  --item-background: #212124;
+  --item-hover: #2a2a2e;
+  --item-outline: #2a2a2e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-item {
+  padding: 0.75rem;
+  border-radius: 3px;
+  outline: var(--item-outline) 0.75px solid;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.002);
+}
+
+.grid-item-title-center {
+  padding: 1rem;
+  color: var(--general-color);
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.grid-item-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--general-color);
+}
+
+.grid-item-text-center {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--general-color);
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* INTRODUCTION GRID STYLES */
+#introduction {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 95% 1fr;
+  gap: 0rem 0rem;
+  grid-template-areas:
+    "intro-title"
+    "social-media";
+  background-size: cover;
+  background: linear-gradient(to bottom right, #000000 0%, #2c2b2c 100%);
+}
+
+#intro-title {
+  grid-area: intro-title;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  padding: 5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* SOCIAL MEDIA BAR STYLES */
+#social-media-bar {
+  grid-area: social-media;
+}
+
+#social-media-bar {
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+#social-media-bar a {
+  font-size: 1.75rem;
+  margin-left: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#social-media-bar a:hover {
+  transition: 0.5s ease;
+  color: #ff5147;
+}
+
+/* ABOUT GRID STYLES */
+#about {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hire-status"
+    "about-title"
+    "about-text";
+}
+
+#about-title {
+  grid-area: about-title;
+}
+
+#about-text {
+  grid-area: about-text;
+  width: 55%;
+  margin: auto;
+  line-height: 175%;
+  font-size: 1.35rem;
+}
+
+/* HIRE STATUS NOTICE STYLES */
+#hire-status {
+  grid-area: hire-status;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.for-hire {
+  outline: none;
+  color: #ffffff;
+  background-color: var(--pastel-red);
+}
+
+.not-for-hire {
+  outline: none;
+  color: #ffffff;
+  background-color: var(--pastel-green);
+}
+
+/* SKILLS GRID STYLES */
+#skills {
+  width: 100%;
+  min-height: 30vh;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1rem;
+  grid-template-areas:
+    "skills-title"
+    "skills-wrapper";
+}
+
+#skills-title {
+  grid-area: skills-title;
+}
+
+#skills-wrapper {
+  grid-area: skills-wrapper;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem 1rem;
+}
+
+.skills-item {
+  text-align: center;
+  padding: 1rem;
+  color: var(--general-color);
+  background-color: var(--item-background);
+}
+
+.skills-item:hover {
+  transition: 0.35s ease-in;
+  background-color: var(--item-hover);
+}
+
+.skills-item-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-image {
+  width: 4.5rem;
+}
+
+.skills-item-tag {
+  padding-top: 0.75rem;
+}
+
+/* PROJECTS GRID STYLES */
+#projects {
+  width: 100%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1rem;
+  grid-template-areas:
+    "projects-title"
+    "projects-wrapper";
+}
+
+#projects-title {
+  grid-area: projects-title;
+}
+
+#projects-wrapper {
+  grid-area: projects-wrapper;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1rem;
+}
+
+.projects-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.projects-item-image > img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+.projects-item-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease-in;
+  background-color: var(--pastel-red);
+}
+
+.projects-item:hover .projects-item-overlay {
+  opacity: 1;
+}
+
+.projects-item-text {
+  position: absolute;
+  text-align: center;
+  color: #ffffff;
+  font-size: 1rem;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* TESTIMONIAL GRID STYLES */
+#reviews {
+  width: 100%;
+  min-height: 30vh;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1rem;
+  grid-template-areas:
+    "reviews-title"
+    "reviews-wrapper";
+}
+
+#reviews-title {
+  grid-area: reviews-title;
+}
+
+#reviews-wrapper {
+  grid-area: reviews-wrapper;
+  width: 30%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem 1rem;
+}
+
+.reviews-item {
+  text-align: center;
+  color: var(--general-color);
+  background-color: var(--item-background);
+}
+
+.reviews-text {
+  width: 83%;
+  margin: auto;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.reviewer-name,
+.reviewer-role,
+.reviewer-flag {
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* FOOTER SPECIFIC CSS STYLES */
+footer {
+  padding: 0.75rem;
+  min-height: 7.5vh;
+  text-align: center;
+  color: #ffffff;
+  border-top: solid 0.25rem var(--pastel-red);
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-item {
+  padding: 0.1rem;
+  font-size: 0.9rem;
+}
+
+.footer-item > a {
+  color: #ffffff;
+  font-size: 0.75rem;
+  text-decoration: none;
+}

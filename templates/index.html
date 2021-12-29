@@ -1,0 +1,329 @@
+{% extends "layout.html" %} {% block content %}
+
+<section id="introduction">
+  <div id="intro-title">
+    Hi
+    <br />
+    I'm Abdullah Rehmat
+    <br />
+    A Web & Software Developer...
+  </div>
+  <div id="social-media-bar" class="grid-item-content">
+    <div class="social-media-item">
+      <a onclick="toggleTheme()" class="uil uil-moon"></a>
+    </div>
+
+    <div class="social-media-item">
+      <a
+        class="uil uil-twitter-alt"
+        href="https://twitter.com/ARehmat20"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+
+    <div class="social-media-item">
+      <a
+        class="uil uil-linkedin"
+        href="https://www.linkedin.com/in/abdullahrehmat/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+
+    <div class="social-media-item">
+      <a
+        class="uil uil-github"
+        href="https://github.com/AbdullahRehmat"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+
+    <div class="social-media-item">
+      <a
+        class="uil uil-envelope-alt"
+        href="mailto:rehmat.dev@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div id="hire-status" class="grid-item for-hire">
+    <i class="uil uil-exclamation-triangle"></i> Available For Hire ...
+  </div>
+
+  <!--
+  <div id="hire-status" class="grid-item not-for-hire">
+    <i class="uil uil-exclamation-triangle"></i> Currently Working On A Project...
+  </div>
+  -->
+
+  <div id="about-title" class="grid-item-title-center">About Me</div>
+
+  <div id="about-text" class="grid-item-text-center">
+    Founder of 10Code Development & Full-Stack Developer based in London/Riyadh.
+    I specialize in designing, developing, and delivering custom web & software
+    solutions, mainly with Python. Currently I work remotely on projects for
+    clients from all around the world. I'm always interested in working on new
+    and exciting projects. I turn ideas into reality - on time and on budget.
+    <br />
+    Let's make somthing special...
+  </div>
+</section>
+
+<section id="skills">
+  <div id="skills-title" class="grid-item-title-center">Skills</div>
+  <div id="skills-wrapper">
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/html5-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">HTML</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/css3-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">CSS</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/js-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">JavaScript</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/python-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Python</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/go-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Go</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/c-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">C</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/git-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Git | GitHub</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/docker-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Docker</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/mongo-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">MongoDB</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/postgresql-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">PostgreSQL</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/redis-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Redis</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/ps-2-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">PhotoShop</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/figma-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Figma</div>
+    </div>
+
+    <div class="skills-item grid-item">
+      <div class="skills-item-image">
+        <img
+          src="{{url_for('static', filename='images/skills/inkscape-min.webp')}}"
+          class="skills-image"
+        />
+      </div>
+      <div class="skills-item-tag">Inkscape</div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div id="projects-title" class="grid-item-title-center">Recent Projects</div>
+  <div id="projects-wrapper">
+    <div class="projects-item grid-item">
+      <div class="projects-item-image">
+        <img src="{{url_for('static', filename='images/projects/MBB.webp')}}" />
+      </div>
+      <div class="projects-item-overlay">
+        <div class="projects-item-text">
+          Masjid Bin Baz:
+          <br />
+          Bespoke Frontend + Backend Server
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-item grid-item">
+      <div class="projects-item-image">
+        <img
+          src="{{url_for('static', filename='images/projects/10Code.webp')}}"
+        />
+      </div>
+      <div class="projects-item-overlay">
+        <div class="projects-item-text">
+          10Code Development: <br />
+          Bespoke Frontend + Backend Server
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-item grid-item">
+      <div class="projects-item-image">
+        <img
+          src="{{url_for('static', filename='images/projects/PertinentOps.webp')}}"
+        />
+      </div>
+      <div class="projects-item-overlay">
+        <div class="projects-item-text">
+          Pertinent Operations: <br />
+          Consulting & Copywriting
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-item grid-item">
+      <div class="projects-item-image">
+        <img
+          src="{{url_for('static', filename='images/projects/Politi.webp')}}"
+        />
+      </div>
+      <div class="projects-item-overlay">
+        <div class="projects-item-text">
+          Politi.io: <br />
+          API Design + Custom Server & Web Scraper
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-item grid-item">
+      <div class="projects-item-image">
+        <img
+          src="{{url_for('static', filename='images/projects/reSearch.webp')}}"
+        />
+      </div>
+      <div class="projects-item-overlay">
+        <div class="projects-item-text">
+          reSearch Engine: <br />
+          Microservice based Search Engine
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-item grid-item">
+      <div class="projects-item-image">
+        <img
+          src="{{url_for('static', filename='images/projects/Diceware.webp')}}"
+        />
+      </div>
+      <div class="projects-item-overlay">
+        <div class="projects-item-text">
+          Diceware: <br />
+          Password Generator Implemented In Go
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div id="reviews-title" class="grid-item-title-center">Testimonials</div>
+  <div id="reviews-wrapper">
+    <div class="reviews-item grid-item">
+      <div class="reviews-text">
+        The best experience I’ve had with any developer, hands down. I would
+        recommend Abdullah to people who need a talented, driven, and
+        client-first full stack developer to help their ideas come to life.
+      </div>
+      <div class="reviewer">
+        <div class="reviewer-name">Ari Salsberg</div>
+        <div class="reviewer-role">Founder, Politi</div>
+        <div class="reviewer-flag">🇺🇸</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
