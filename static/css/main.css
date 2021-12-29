@@ -380,3 +380,125 @@ footer {
   font-size: 0.75rem;
   text-decoration: none;
 }
+
+@media (max-width: 1280px) {
+  #intro-title {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+
+  #about-text {
+    width: 65%;
+    margin: auto;
+    line-height: 150%;
+    font-size: 1.2rem;
+  }
+
+  #hire-status {
+    width: 75%;
+  }
+
+  #skills-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  #projects-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  #intro-title {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+
+  #about-text {
+    width: 75%;
+    line-height: 150%;
+    font-size: 1.2rem;
+  }
+
+  #hire-status {
+    width: 75%;
+  }
+
+  #skills-wrapper {
+    width: 85%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #projects-wrapper {
+    width: 85%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #reviews-wrapper {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #intro-title {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+
+  #about-text {
+    width: 70%;
+    line-height: 150%;
+    font-size: 1.2rem;
+  }
+
+  #hire-status {
+    width: 80%;
+  }
+
+  #skills-wrapper {
+    width: 85%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #projects-wrapper {
+    width: 85%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #reviews-wrapper {
+    width: 85%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  #intro-title {
+    padding: 3rem;
+    font-size: 2rem;
+  }
+
+  #about-text {
+    width: 85%;
+    line-height: 150%;
+    font-size: 1.2rem;
+  }
+
+  #hire-status {
+    width: 75%;
+  }
+
+  #skills-wrapper {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #projects-wrapper {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #reviews-wrapper {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
