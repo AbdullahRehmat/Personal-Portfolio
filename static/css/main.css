@@ -40,7 +40,7 @@ body {
 
 .grid-item {
   padding: 0.75rem;
-  border-radius: 3px;
+  border-radius: 5px;
   box-shadow: 2.8px 2.8px 2.8px rgba(0, 0, 0, 0.1),
     6.7px 6.7px 6.7px rgba(0, 0, 0, 0.072),
     12.5px 12.5px 12.5px rgba(0, 0, 0, 0.06),
@@ -283,6 +283,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  border-radius: 5px;
 }
 
 .projects-item-image > img {
@@ -290,6 +291,7 @@ body {
   padding: 0;
   width: 100%;
   display: block;
+  border-radius: 5px;
 }
 
 .projects-item-overlay {
@@ -301,6 +303,7 @@ body {
   height: 100%;
   width: 100%;
   opacity: 0;
+  border-radius: 5px;
   transition: 0.5s ease-in;
   background-color: var(--pastel-red);
 }
@@ -353,6 +356,7 @@ body {
   text-align: center;
   color: var(--general-color);
   background-color: var(--item-background);
+  outline: var(--item-outline) 0.75px solid;
 }
 
 .reviews-text {
