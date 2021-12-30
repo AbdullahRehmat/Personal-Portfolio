@@ -41,8 +41,12 @@ body {
 .grid-item {
   padding: 0.75rem;
   border-radius: 3px;
-  outline: var(--item-outline) 0.75px solid;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.002);
+  box-shadow: 2.8px 2.8px 2.8px rgba(0, 0, 0, 0.1),
+    6.7px 6.7px 6.7px rgba(0, 0, 0, 0.072),
+    12.5px 12.5px 12.5px rgba(0, 0, 0, 0.06),
+    22.3px 22.3px 22.3px rgba(0, 0, 0, 0.05),
+    41.8px 41.8px 41.8px rgba(0, 0, 0, 0.04),
+    100px 100px 100px rgba(0, 0, 0, 0.028);
 }
 
 .grid-item-title-center {
@@ -82,7 +86,17 @@ body {
     "intro-title"
     "social-media";
   background-size: cover;
+  /*
   background: linear-gradient(to bottom right, #000000 0%, #2c2b2c 100%);
+  */
+  background: #121212;
+  background-size: 2.5rem 2.5rem;
+  background-image: radial-gradient(
+    circle,
+    rgba(83, 69, 124, 0.25) 0.12rem,
+    transparent 0
+  );
+  background-attachment: fixed;
 }
 
 #intro-title {
@@ -212,6 +226,7 @@ body {
   padding: 1rem;
   color: var(--general-color);
   background-color: var(--item-background);
+  outline: var(--item-outline) 0.75px solid;
 }
 
 .skills-item:hover {
