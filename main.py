@@ -8,6 +8,10 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/clients/<path:path>")
+def serve_clients(path):
+    return send_from_directory("static/clients", path)
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
