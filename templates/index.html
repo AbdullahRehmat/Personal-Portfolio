@@ -1,6 +1,12 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %} 
 
-<section id="introduction">
+{% block head %}
+<title>A. Rehmat</title>
+{% endblock %}
+
+{% block content %}
+
+<section id="introduction" style="height: 100vh">
   <div id="intro-title">
     Hi
     <br />
@@ -8,6 +14,7 @@
     <br />
     A Web & Software Developer...
   </div>
+
   <div id="social-media-bar" class="grid-item-content">
     <div class="social-media-item">
       <a onclick="toggleTheme()" class="uil uil-moon"></a>
@@ -223,7 +230,6 @@
 <section id="projects">
   <div id="projects-title" class="grid-item-title-center">Recent Projects</div>
   <div id="projects-wrapper">
-
     <div class="projects-item grid-item">
       <div class="projects-item-image">
         <img src="{{url_for('static', filename='images/projects/MBB.webp')}}" />

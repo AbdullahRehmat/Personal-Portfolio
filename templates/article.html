@@ -1,0 +1,27 @@
+{% extends "layout.html" %} 
+
+{% block head %}
+<title>A. Rehmat - {{article.title}}</title>
+{% endblock %}
+
+
+{% block content %}
+
+<section id="introduction" style="height: 30vh">
+  <div id="intro-title-center">Blog</div>
+</section>
+
+<section id="articles-grid">
+  <div class="article-wrapper grid-item">
+    <div class="article-title grid-item-title-center">{{ article.title }}</div>
+    <div class="article-subtitle grid-item-subtitle-center">
+      {{ article.subtitle }}
+    </div>
+    <div class="article-intro grid-item-text">{{ article.html|safe }}</div>
+    <div id="article-metadata" class="grid-item-text-meta">
+      {{ article.author }} | {{ article.date }}
+    </div>
+  </div>
+</section>
+
+{% endblock %}
