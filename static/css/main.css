@@ -40,8 +40,11 @@ body {
 }
 
 .grid-item {
-  padding: 0.75rem;
+  margin: 0.5rem;
+  padding: 1rem;
   border-radius: 5px;
+  background-color: var(--item-background);
+  outline: var(--item-outline) 0.75px solid;
   box-shadow: 2.8px 2.8px 2.8px rgba(0, 0, 0, 0.1),
     6.7px 6.7px 6.7px rgba(0, 0, 0, 0.072),
     12.5px 12.5px 12.5px rgba(0, 0, 0, 0.06),
@@ -50,10 +53,35 @@ body {
     100px 100px 100px rgba(0, 0, 0, 0.028);
 }
 
-.grid-item-title-center {
-  padding: 1rem;
+.grid-item-title {
+  padding-bottom: 1rem;
   color: var(--general-color);
   font-size: 1.7rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.grid-item-title-center {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--general-color);
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.grid-item-subtitle {
+  padding-bottom: 1rem;
+  color: var(--general-color);
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.grid-item-subtitle-center {
+  padding-bottom: 1rem;
+  color: var(--general-color);
+  font-size: 1.35rem;
   font-weight: 500;
   text-align: center;
 }
@@ -72,10 +100,19 @@ body {
   text-align-last: center;
 }
 
+.grid-item-text-meta {
+  padding-top: 1.35rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--general-color);
+  text-align: justify;
+  text-align-last: right;
+}
+
 /* INTRODUCTION GRID STYLES */
 #introduction {
   width: 100%;
-  height: 100vh;
+  position: relative;
   padding: 0;
   margin: auto;
   margin-bottom: 1rem;
@@ -106,6 +143,18 @@ body {
   align-items: center;
   justify-content: left;
   text-align: left;
+  padding: 5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+#intro-title-center {
+  grid-area: intro-title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 5rem;
   font-size: 2.5rem;
   font-weight: 500;
@@ -152,6 +201,7 @@ body {
   margin-bottom: 3rem;
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1rem 1rem;
   grid-template-areas:
     "hire-status"
     "about-title"
@@ -175,7 +225,7 @@ body {
   grid-area: hire-status;
   width: 70%;
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   font-size: 1.3rem;
   font-weight: 600;
   text-align: center;
@@ -226,7 +276,6 @@ body {
   padding: 1rem;
   color: var(--general-color);
   background-color: var(--item-background);
-  outline: var(--item-outline) 0.75px solid;
 }
 
 .skills-item:hover {
@@ -345,7 +394,7 @@ body {
 
 #reviews-wrapper {
   grid-area: reviews-wrapper;
-  width: 30%;
+  width: 25%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -356,13 +405,12 @@ body {
   text-align: center;
   color: var(--general-color);
   background-color: var(--item-background);
-  outline: var(--item-outline) 0.75px solid;
 }
 
 .reviews-text {
-  width: 83%;
+  width: 80%;
   margin: auto;
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 1.1rem;
   text-align: justify;
   text-align-last: center;
@@ -373,6 +421,31 @@ body {
 .reviewer-flag {
   font-size: 0.9rem;
   text-align: right;
+}
+
+/* ARTICLES GRID */
+#articles-grid {
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.article-wrapper {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/* ARTICLE GRID */
+#article-grid {
+  width: 90%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* FOOTER SPECIFIC CSS STYLES */
