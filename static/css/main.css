@@ -4,7 +4,7 @@ html {
   padding: 0;
   min-width: 350px;
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 15px;
   font-family: "Open Sans", sans-serif;
   background-color: var(--background-color);
   scrollbar-width: auto;
@@ -45,12 +45,7 @@ body {
   border-radius: 5px;
   background-color: var(--item-background);
   outline: var(--item-outline) 0.75px solid;
-  box-shadow: 2.8px 2.8px 2.8px rgba(0, 0, 0, 0.1),
-    6.7px 6.7px 6.7px rgba(0, 0, 0, 0.072),
-    12.5px 12.5px 12.5px rgba(0, 0, 0, 0.06),
-    22.3px 22.3px 22.3px rgba(0, 0, 0, 0.05),
-    41.8px 41.8px 41.8px rgba(0, 0, 0, 0.04),
-    100px 100px 100px rgba(0, 0, 0, 0.028);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .grid-item-title {
@@ -109,8 +104,8 @@ body {
   text-align-last: right;
 }
 
-/* INTRODUCTION GRID STYLES */
-#introduction {
+/* BANNER GRID STYLES */
+#banner {
   width: 100%;
   position: relative;
   padding: 0;
@@ -121,12 +116,10 @@ body {
   grid-template-rows: 95% 1fr;
   gap: 0rem 0rem;
   grid-template-areas:
-    "intro-title"
+    "banner-title"
+    "banner-subtitle"
     "social-media";
   background-size: cover;
-  /*
-  background: linear-gradient(to bottom right, #000000 0%, #2c2b2c 100%);
-  */
   background: #121212;
   background-size: 2.5rem 2.5rem;
   background-image: radial-gradient(
@@ -137,8 +130,8 @@ body {
   background-attachment: fixed;
 }
 
-#intro-title {
-  grid-area: intro-title;
+#banner-title {
+  grid-area: banner-title;
   display: flex;
   align-items: center;
   justify-content: left;
@@ -149,8 +142,8 @@ body {
   color: #ffffff;
 }
 
-#intro-title-center {
-  grid-area: intro-title;
+#banner-title-center {
+  grid-area: banner-title;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,11 +155,8 @@ body {
 }
 
 /* SOCIAL MEDIA BAR STYLES */
-#social-media-bar {
+#intro-bar {
   grid-area: social-media;
-}
-
-#social-media-bar {
   right: 0;
   bottom: 0;
   display: flex;
@@ -180,7 +170,7 @@ body {
   padding-bottom: 1rem;
 }
 
-#social-media-bar a {
+#intro-bar a {
   font-size: 1.75rem;
   margin-left: 1.2rem;
   color: #ffffff;
@@ -188,7 +178,7 @@ body {
   cursor: pointer;
 }
 
-#social-media-bar a:hover {
+#intro-bar a:hover {
   transition: 0.5s ease;
   color: #ff5147;
 }
@@ -425,7 +415,7 @@ body {
 
 /* ARTICLES GRID */
 #articles-grid {
-  width: 90%;
+  width: 80%;
   padding: 0;
   margin: auto;
   margin-bottom: 3rem;
@@ -433,14 +423,24 @@ body {
   grid-template-columns: 1fr;
 }
 
+.articles-item:hover {
+  transition: 0.5s ease-in;
+  background-color: var(--item-hover);
+}
+
 .article-wrapper {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
 
+.article-link {
+  color: var(--general-color);
+  text-decoration: none;
+}
+
 /* ARTICLE GRID */
 #article-grid {
-  width: 90%;
+  width: 80%;
   padding: 0;
   margin: auto;
   margin-bottom: 3rem;
@@ -474,7 +474,7 @@ footer {
 }
 
 @media (max-width: 1280px) {
-  #intro-title {
+  #banner-title {
     padding: 3rem;
     font-size: 2rem;
   }
@@ -500,7 +500,7 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  #intro-title {
+  #banner-title {
     padding: 3rem;
     font-size: 2rem;
   }
@@ -532,7 +532,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #intro-title {
+  #banner-title {
     padding: 3rem;
     font-size: 2rem;
   }
@@ -564,7 +564,7 @@ footer {
 }
 
 @media (max-width: 640px) {
-  #intro-title {
+  #banner-title {
     padding: 3rem;
     font-size: 2rem;
   }
