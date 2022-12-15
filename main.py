@@ -13,7 +13,8 @@ ARTICLE_DIR = "articles"
 
 
 def strip_tags(text):
-    safe_text = re.sub(re.compile("<.*?>"), "", text)
+    # safe_text = re.sub(re.compile("<.*?>"), "", text)
+    safe_text = re.sub(re.compile("<.*?>BLOCKQUOTE"), "", text)
 
     return safe_text
 
