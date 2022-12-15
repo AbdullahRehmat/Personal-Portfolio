@@ -1,21 +1,19 @@
-{% extends "layout.html" %} 
-
-{% block head %}
+{% extends "layout.html" %} {% block head %}
 <title>A. Rehmat - Blog</title>
-{% endblock %}
+{% endblock %} {% block content %}
 
+<section id="banner" style="height: 45vh">
+  <div id="banner-title-center">Blog</div>
 
-{% block content %}
-
-<section id="introduction" style="height: 30vh">
-  <div id="intro-title-center">Blog</div>
-
-  <div id="social-media-bar" class="grid-item-content">
-    <div class="social-media-item">
+  <div id="intro-bar" class="grid-item-content">
+    <div class="intro-bar-item">
       <a onclick="toggleTheme()" class="uil uil-moon"></a>
     </div>
+    <div class="intro-bar-item">
+      <a class="uil uil-estate" href="/" rel="noopener noreferrer nofollow"></a>
+    </div>
 
-    <div class="social-media-item">
+    <div class="intro-bar-item">
       <a
         class="uil uil-twitter-alt"
         href="https://twitter.com/ARehmat20"
@@ -24,7 +22,7 @@
       ></a>
     </div>
 
-    <div class="social-media-item">
+    <div class="intro-bar-item">
       <a
         class="uil uil-linkedin"
         href="https://www.linkedin.com/in/abdullahrehmat/"
@@ -33,7 +31,7 @@
       ></a>
     </div>
 
-    <div class="social-media-item">
+    <div class="intro-bar-item">
       <a
         class="uil uil-github"
         href="https://github.com/AbdullahRehmat"
@@ -42,7 +40,7 @@
       ></a>
     </div>
 
-    <div class="social-media-item">
+    <div class="intro-bar-item">
       <a
         class="uil uil-envelope-alt"
         href="mailto:rehmat.dev@gmail.com"
@@ -56,17 +54,25 @@
 <section id="articles-grid">
   {% for article in articles %}
 
-  <div class="article-wrapper grid-item">
-    <div class="article-title grid-item-title">{{ article.title }}</div>
-    <div class="article-subtitle grid-item-subtitle">
-      {{ article.subtitle }}
-    </div>
-    <div class="article-intro grid-item-text">
-      {{ " ".join(strip_tags(article.html[3:]).split()[:100]) + "..."|safe }}
-    </div>
-    <div id="article-metadata" class="grid-item-text-meta">
-      {{ article.author }} | {{ article.date }}
-    </div>
+  <div class="articles-item article-wrapper grid-item">
+    <a
+      class="article-link"
+      href="{{ url_for('article', name=article.path.replace('articles/', '')) }}"
+    >
+      <div class="article-title grid-item-title">{{ article.title }}</div>
+
+      <div class="article-subtitle grid-item-subtitle">
+        {{ article.subtitle }}
+      </div>
+
+      <div class="article-intro grid-item-text">
+        {{ " ".join(strip_tags(article.html[3:]).split()[:100]) + "..."|safe }}
+      </div>
+
+      <div id="article-metadata" class="grid-item-text-meta">
+        {{ article.author }} | {{ article.date }}
+      </div>
+    </a>
   </div>
 
   {% endfor %}

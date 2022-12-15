@@ -1,23 +1,69 @@
-{% extends "layout.html" %} 
-
-{% block head %}
+{% extends "layout.html" %} {% block head %}
 <title>A. Rehmat - {{article.title}}</title>
-{% endblock %}
+{% endblock %} {% block content %}
 
+<section id="banner" style="height: 45vh">
+  <div id="banner-title-center">{{ article.title }}</div>
 
-{% block content %}
+  <div id="intro-bar" class="grid-item-content">
+    <div class="intro-bar-item">
+      <a onclick="toggleTheme()" class="uil uil-moon"></a>
+    </div>
 
-<section id="introduction" style="height: 30vh">
-  <div id="intro-title-center">Blog</div>
+    <div class="intro-bar-item">
+      <a class="uil uil-estate" href="/" rel="noopener noreferrer nofollow"></a>
+    </div>
+
+    <div class="intro-bar-item">
+      <a
+        class="uil uil-twitter-alt"
+        href="https://twitter.com/ARehmat20"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+
+    <div class="intro-bar-item">
+      <a
+        class="uil uil-linkedin"
+        href="https://www.linkedin.com/in/abdullahrehmat/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+
+    <div class="intro-bar-item">
+      <a
+        class="uil uil-github"
+        href="https://github.com/AbdullahRehmat"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+
+    <div class="intro-bar-item">
+      <a
+        class="uil uil-envelope-alt"
+        href="mailto:rehmat.dev@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      ></a>
+    </div>
+  </div>
 </section>
 
 <section id="articles-grid">
   <div class="article-wrapper grid-item">
-    <div class="article-title grid-item-title-center">{{ article.title }}</div>
+    <!-- <div class="article-title grid-item-title-center">
+      {{ article.title }}
+    </div> -->
+
     <div class="article-subtitle grid-item-subtitle-center">
       {{ article.subtitle }}
     </div>
+
     <div class="article-intro grid-item-text">{{ article.html|safe }}</div>
+
     <div id="article-metadata" class="grid-item-text-meta">
       {{ article.author }} | {{ article.date }}
     </div>
